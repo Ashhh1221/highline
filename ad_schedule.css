@@ -1,0 +1,179 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* ====== General Page Styles ====== */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #e0e5ec;
+    color: #333;
+
+}
+
+/* ====== Sidebar ====== */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 100%;
+    background-color: #e0e5ec;
+    box-shadow: 8px 8px 20px #babecc, -8px -8px 20px #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+}
+
+.sidebar h2 {
+    margin-bottom: 40px;
+    font-weight: 700;
+    color: #444;
+    font-size: 22px;
+    text-align: center;
+}
+
+.sidebar a {
+    text-decoration: none;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    background-color: #e0e5ec;
+    color: #555;
+    font-weight: 500;
+    box-shadow: 5px 5px 12px #babecc, -5px -5px 12px #ffffff;
+    transition: all 0.3s ease;
+}
+
+.sidebar a:hover {
+    box-shadow: inset 5px 5px 12px #babecc, inset -5px -5px 12px #ffffff;
+    color: #222;
+}
+
+.sidebar a.active {
+    background-color: #e0e5ec;
+    box-shadow: inset 5px 5px 12px #babecc, inset -5px -5px 12px #ffffff;
+    color: #000;
+}
+
+/* ====== Main Content ====== */
+
+.main {
+    margin-left: 10px; /* sidebar width */
+    padding: 40px 30px;
+    background-color: #e0e5ec;
+    min-height: 100vh;
+}
+
+h1 {
+    margin-left: 260px; /* leave space for sidebar */
+    margin-top: 40px;
+    font-weight: 600;
+    color: #444;
+}
+
+/* Add Event Button */
+a[href="ad_add_sked.php"] {
+    display: inline-block;
+    margin-left: 260px;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #e0e5ec;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    box-shadow: 5px 5px 15px #babecc, -5px -5px 15px #ffffff;
+    transition: all 0.3s ease;
+}
+
+a[href="ad_add_sked.php"]:hover {
+    box-shadow: inset 5px 5px 15px #babecc, inset -5px -5px 15px #ffffff;
+    color: #222;
+}
+
+/* ====== Table ====== */
+table {
+    margin-left: 260px;
+    width: calc(100% - 280px); /* full width minus sidebar + margin */
+    border-collapse: collapse;
+    background-color: #e0e5ec;
+    border-radius: 15px;
+    box-shadow: 8px 8px 20px #babecc, -8px -8px 20px #ffffff;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    font-weight: 600;
+    font-size: 14px;
+    color: #555;
+    background-color: #e0e5ec;
+    box-shadow: inset 2px 2px 5px #babecc, inset -2px -2px 5px #ffffff;
+}
+
+td {
+    font-size: 14px;
+    color: #555;
+    border-bottom: 1px solid #d1d9e6;
+}
+
+/* Row Hover Effect */
+tr:hover td {
+    background-color: #d8dee8;
+    box-shadow: inset 3px 3px 6px #babecc, inset -3px -3px 6px #ffffff;
+    transition: all 0.3s ease;
+}
+
+/* ====== Action Buttons ====== */
+td a {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-right: 5px;
+    border-radius: 10px;
+    background-color: #e0e5ec;
+    color: #555;
+    text-decoration: none;
+    font-weight: 500;
+    box-shadow: 4px 4px 10px #babecc, -4px -4px 10px #ffffff;
+    transition: all 0.2s ease;
+}
+
+td a:hover {
+    box-shadow: inset 4px 4px 10px #babecc, inset -4px -4px 10px #ffffff;
+    color: #222;
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 768px) {
+    h1, a[href="ad_add_sked.php"], table {
+        margin-left: 20px;
+        width: calc(100% - 40px);
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        flex-direction: row;
+        padding: 10px;
+        box-shadow: none;
+        overflow-x: auto;
+    }
+
+    .sidebar h2 {
+        display: none;
+    }
+
+    .sidebar a {
+        margin-right: 10px;
+        margin-bottom: 0;
+        padding: 8px 12px;
+    }
+}

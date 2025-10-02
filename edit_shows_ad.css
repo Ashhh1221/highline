@@ -1,0 +1,167 @@
+/* ---------------- Reset ---------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #e0e5ec;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    color: #333;
+}
+
+/* ---------------- Dashboard Container ---------------- */
+.dashboard {
+    max-width: 900px;
+    width: 100%;
+}
+
+.main-content header h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+/* ---------------- Edit Container (Soft UI) ---------------- */
+.edit-container {
+    background: #e0e5ec;
+    border-radius: 20px;
+    padding: 25px 30px;
+    margin-bottom: 30px;
+    box-shadow: 9px 9px 16px #c5c9d1,
+                -9px -9px 16px #ffffff;
+}
+
+/* ---------------- Form Elements ---------------- */
+label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: 500;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+input[type="file"],
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 12px;
+    border: none;
+    background: #e0e5ec;
+    box-shadow: inset 6px 6px 8px #c5c9d1,
+                inset -6px -6px 8px #ffffff;
+    font-size: 0.95rem;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+input:focus,
+textarea:focus {
+    box-shadow: inset 4px 4px 6px #c5c9d1,
+                inset -4px -4px 6px #ffffff,
+                0 0 8px #a1cfff;
+}
+
+/* ---------------- Buttons ---------------- */
+.btn {
+  background: #a3c77b;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  text-decoration: none;
+  color: black;
+}
+
+.btn:hover {
+    box-shadow: inset 4px 4px 6px #c5c9d1,
+                inset -4px -4px 6px #ffffff;
+}
+
+.cancel-btn {
+    margin-left: 10px;
+}
+
+.delete {
+  background: #a3c77b;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  text-decoration: none;
+  color: black;
+}
+
+.delete:hover {
+  background-color: #708993;
+}
+
+/* ---------------- Poster Preview ---------------- */
+.poster-preview {
+    margin-top: 10px;
+    width: 120px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px rgba(0,0,0,0.1);
+}
+
+/* ---------------- Table ---------------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background: #e0e5ec;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: inset 6px 6px 8px #c5c9d1,
+                inset -6px -6px 8px #ffffff;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background: #e0e5ec;
+    font-weight: 600;
+    box-shadow: inset 6px 6px 8px #c5c9d1,
+                inset -6px -6px 8px #ffffff;
+}
+
+tr:nth-child(even) {
+    background: #f0f3f7;
+}
+
+tr:hover {
+    background: #e6ebf1;
+}
+
+/* ---------------- Error Messages ---------------- */
+.error {
+    color: #ff6b6b;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* ---------------- Responsive ---------------- */
+@media(max-width: 600px){
+    .edit-container {
+        padding: 20px;
+    }
+
+    .btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+}

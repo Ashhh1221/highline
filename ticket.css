@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sail&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Courier New', monospace;
+    background-color: #e7f0ef;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px; /* <-- added */
+  background: #FFFCFB;
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+  z-index: 1000; /* <-- ensure it's on top */
+}
+
+.header h1 {
+  font-size: 1.6rem;
+  font-family: 'Poppins', sans-serif;
+  color: #708993;
+}
+
+.header ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.header ul li a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #212121;
+  transition: color 0.3s ease;
+}
+
+.header ul li a:hover {
+  color: #387478;
+}
+
+.nav ul li a.active {
+  color: #2a8c82;
+}
+
+.search input {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.search button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 5px;
+}
+
+
+.container {
+  max-width: 960px;
+  margin: auto;
+  padding: 120px 20px 40px;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.month-title {
+  margin-top: 40px;
+  font-size: 24px;
+  color: #444;
+  border-left: 4px solid #82c91e;
+  padding-left: 10px;
+}
+
+.ticket-card {
+  display: flex;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.ticket-card:hover {
+  transform: translateY(-4px);
+}
+
+.date {
+  font-size: 40px;
+  font-weight: bold;
+  margin-right: 25px;
+  color: #111;
+  min-width: 60px;
+}
+
+.info {
+  flex: 1;
+}
+
+.info h3 {
+  margin: 0 0 5px;
+  font-size: 20px;
+}
+
+.info p {
+  margin: 0 0 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.time {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.buy {
+  background: #a3c77b;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  text-decoration: none;
+  color: black;
+}
+
+.buy:hover {
+  background: #88b15d;
+}
+
+@media (max-width: 600px) {
+  .ticket-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .date {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+}
+
+.highline-footer {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 40px 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.05);
+}
+
+.footer-links {
+  margin-bottom: 20px;
+}
+
+.footer-links a {
+  display: inline-block;
+  margin: 5px 15px;
+  font-size: 0.95rem;
+  color: #222;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #67C090;
+}
+
+.social-icons {
+  margin: 20px 0;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin: 0 8px;
+  font-size: 1.1rem;
+  color: #222;
+  background: #fff;
+  border-radius: 4px;
+  padding: 8px 10px;
+  transition: background 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: #ff4b2b;
+  color: #fff;
+}
+
+.footer-credit {
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.footer-credit a {
+  color: #444;
+  text-decoration: underline;
+}
+
+.payment-icon {
+    display: flex;
+    justify-content: center;   /* center align icons */
+    align-items: center;
+    gap: 20px;                 /* spacing between icons */
+    margin-top: 20px;
+}
+
+.payment-icon img {
+    width: 40px;      /* resize icons */
+    height: 40px;     /* force square size */
+    object-fit: contain;
+ /* optional: grayscale effect */
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.payment-icon img:hover {
+    transform: scale(1.15);
+    filter: grayscale(0%);    /* back to color on hover */
+}
+
+@media (max-width: 600px) {
+  .footer-links a,
+  .social-icons a {
+    margin: 6px 10px;
+  }
+
+  .payment-icons img {
+    margin: 6px 4px;
+  }
+}

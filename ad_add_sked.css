@@ -1,0 +1,119 @@
+/* ====== General Page Styles ====== */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #e0e5ec;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+/* ====== Page Title ====== */
+.head {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centers horizontally */
+    justify-content: center; /* push content from top but can adjust */
+    background-color: #e0e5ec;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* ====== Page Title ====== */
+h1 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 28px;
+    color: #444;
+    margin: 0; /* remove margin to avoid overlap */
+}
+
+.head h1{
+    text-align: center; /* centers text horizontally */
+    font-weight: 700;
+    font-size: 28px;
+    color: #444;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+/* ====== Form Container ====== */
+form {
+    background-color: #e0e5ec;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 8px 8px 20px #babecc, -8px -8px 20px #ffffff;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ====== Form Labels and Inputs ====== */
+input, textarea {
+    padding: 12px 15px;
+    border: none;
+    border-radius: 12px;
+    background-color: #e0e5ec;
+    box-shadow: inset 4px 4px 10px #babecc, inset -4px -4px 10px #ffffff;
+    font-size: 14px;
+    color: #555;
+    outline: none;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input:focus, textarea:focus {
+    box-shadow: inset 2px 2px 5px #babecc, inset -2px -2px 5px #ffffff;
+    color: #222;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* ====== Submit Button ====== */
+button[type="submit"] {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 12px;
+    background-color: #e0e5ec;
+    box-shadow: 5px 5px 15px #babecc, -5px -5px 15px #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    color: #555;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    box-shadow: inset 5px 5px 15px #babecc, inset -5px -5px 15px #ffffff;
+    color: #222;
+}
+
+/* ====== Labels ====== */
+label {
+    font-weight: 500;
+    color: #555;
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 600px) {
+    form {
+        padding: 30px 20px;
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+}

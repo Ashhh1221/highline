@@ -1,0 +1,135 @@
+/* adminpanel.css */
+
+/* Reset and base */
+body {
+  margin: 0;
+  font-family: 'Poppins', 'Inter', sans-serif;
+  background: #f0f4f8;
+  color: #444;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Page title */
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 2.6rem;
+  color: #37475a;
+  margin-bottom: 2rem;
+  user-select: none;
+}
+
+/* Error message */
+p[style] {
+  background: #ffdddd;
+  color: #a94442;
+  padding: 1rem 1.5rem;
+  border-radius: 14px;
+  box-shadow: inset 3px 3px 6px #f7d6d6, inset -3px -3px 6px #ffebeb;
+  max-width: 400px;
+  width: 100%;
+  margin-bottom: 2rem;
+  user-select: none;
+}
+
+/* Form container */
+form {
+  background: #e5eefb;
+  padding: 2rem 2.5rem;
+  border-radius: 18px;
+  box-shadow: 8px 8px 16px #c3d1e9, -8px -8px 16px #ffffff;
+  max-width: 480px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+/* Labels */
+label {
+  font-weight: 600;
+  color: #4b5a75;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+}
+
+/* Inputs, textarea */
+input[type="text"],
+input[type="date"],
+input[type="time"],
+textarea {
+  margin-top: 0.4rem;
+  padding: 0.7rem 1rem;
+  border-radius: 12px;
+  border: none;
+  background: #dde9fc;
+  box-shadow: inset 5px 5px 10px #c3d1e9, inset -5px -5px 10px #ffffff;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  resize: vertical;
+  transition: box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: inset 3px 3px 6px #9bb5db, inset -3px -3px 6px #d6e0ff;
+}
+
+/* Submit button */
+button[type="submit"] {
+  margin-top: 1rem;
+  background: linear-gradient(145deg, #a8b9ff, #7a8edc);
+  border: none;
+  border-radius: 16px;
+  color: #f5faff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 0.85rem 0;
+  cursor: pointer;
+  box-shadow: 6px 6px 12px #5f74d6, -6px -6px 12px #b1c1ff;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+}
+
+button[type="submit"]:hover {
+  background: linear-gradient(145deg, #7b8cff, #5a6fd6);
+  box-shadow: 4px 4px 10px #4357af, -4px -4px 10px #9ba5ff;
+}
+
+/* Back link */
+p a {
+  color: #5a6d8c;
+  font-weight: 600;
+  text-decoration: none;
+  user-select: none;
+  margin-top: 1.8rem;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+p a:hover {
+  color: #37475a;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 520px) {
+  body {
+    padding: 1rem;
+  }
+
+  form {
+    padding: 1.5rem 1.8rem;
+  }
+}

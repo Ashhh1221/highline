@@ -1,0 +1,189 @@
+/* check_order.css
+   Modern Minimalist UI + Glassmorphism + Soft Pastel Flat Design
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+:root{
+  --bg-a: #F7FAFF;      /* very pale */
+  --bg-b: #FFF6FB;      /* warm pale */
+  --glass: rgba(255,255,255,0.6);
+  --muted: #6B7280;
+  --text: #0F172A;
+  --accent-1: #A7F3D0;  /* mint */
+  --accent-2: #FFD6E0;  /* pink */
+  --accent-3: #C7D2FE;  /* lilac */
+  --radius: 14px;
+  --shadow: 0 12px 36px rgba(15,23,42,0.08);
+  --trans: 220ms cubic-bezier(.2,.9,.3,1);
+}
+
+/* page background */
+*{box-sizing:border-box}
+html,body{
+  height:100%;
+  margin:0;
+  font-family:'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  background: linear-gradient(135deg, var(--bg-a) 0%, var(--bg-b) 100%);
+  color:var(--text);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding: clamp(16px, 4vw, 36px);
+}
+
+/* main card */
+.check-card{
+  width:100%;
+  max-width:760px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.72), rgba(255,255,255,0.52));
+  border-radius: var(--radius);
+  padding: clamp(18px, 3.5vw, 36px);
+  border: 1px solid rgba(255,255,255,0.35);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px) saturate(1.05);
+  -webkit-backdrop-filter: blur(10px) saturate(1.05);
+  position:relative;
+  overflow:hidden;
+}
+
+/* decorative pastel glows */
+.check-card::before,
+.check-card::after{
+  content:"";
+  position:absolute;
+  border-radius:50%;
+  filter:blur(40px);
+  opacity:.45;
+  pointer-events:none;
+}
+.check-card::before{
+  width:220px;height:220px; top:-70px; right:-70px;
+  background: radial-gradient(circle at 30% 30%, var(--accent-1), transparent 50%);
+}
+.check-card::after{
+  width:160px;height:160px; bottom:-60px; left:-60px;
+  background: radial-gradient(circle at 70% 70%, var(--accent-3), transparent 50%);
+}
+
+/* headings */
+.check-card h2{
+  margin:0 0 8px 0;
+  font-size: clamp(18px, 2.2vw, 22px);
+  font-weight:700;
+  text-align:center;
+}
+.check-card p.lead{
+  margin:0 0 18px 0;
+  color:var(--muted);
+  font-size:14px;
+  text-align:center;
+}
+
+/* form layout */
+.check-form{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  justify-content:center;
+  margin-top:12px;
+  flex-wrap:wrap;
+}
+.check-form label{
+  font-size:14px;
+  color:var(--muted);
+}
+.check-form input[type="text"]{
+  min-width:260px;
+  padding:12px 14px;
+  border-radius:10px;
+  border:1px solid rgba(11,18,36,0.06);
+  background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,255,255,0.9));
+  font-size:14px;
+  outline:none;
+  transition: box-shadow var(--trans), transform var(--trans), border-color var(--trans);
+  box-shadow: 0 6px 18px rgba(11,18,36,0.03);
+}
+.check-form input[type="text"]:focus{
+  transform: translateY(-2px);
+  border-color: rgba(10,150,120,0.12);
+  box-shadow: 0 12px 30px rgba(10,150,120,0.06);
+}
+
+/* submit button */
+.check-form button{
+  padding:12px 18px;
+  border-radius:10px;
+  border:none;
+  font-weight:700;
+  cursor:pointer;
+  background: linear-gradient(90deg, var(--accent-1), var(--accent-3));
+  color:#06202a;
+  box-shadow: 0 10px 28px rgba(15,23,42,0.06);
+  transition: transform var(--trans), box-shadow var(--trans);
+}
+.check-form button:hover{ transform: translateY(-3px); box-shadow: 0 16px 40px rgba(15,23,42,0.1); }
+.check-form button:active{ transform:none; opacity:.98; }
+
+/* result area */
+.result{
+  margin-top:22px;
+  padding:16px;
+  border-radius:12px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.45));
+  border:1px solid rgba(255,255,255,0.35);
+  box-shadow: 0 6px 18px rgba(11,18,36,0.03);
+}
+.result p{
+  margin:8px 0;
+  font-size:15px;
+  line-height:1.45;
+}
+.result p strong{
+  display:inline-block;
+  width:140px;
+  color:var(--muted);
+  font-weight:600;
+}
+
+/* reference id badge */
+.ref-badge{
+  display:inline-block;
+  margin-top:10px;
+  padding:8px 12px;
+  border-radius:999px;
+  font-weight:700;
+  background: linear-gradient(90deg, rgba(255,255,255,0.9), rgba(255,255,255,0.75));
+  border: 1px solid rgba(11,18,36,0.04);
+  box-shadow: 0 8px 20px rgba(11,18,36,0.04);
+  color: #06403a;
+}
+
+/* success / error styles */
+.success{
+  border-left: 4px solid #10B981;
+  padding-left:12px;
+}
+.error{
+  border-left: 4px solid #EF4444;
+  padding-left:12px;
+  color:#b91c1c;
+}
+
+/* small screens */
+@media (max-width:520px){
+  .check-card{ padding:16px; border-radius:12px; }
+  .check-form{ flex-direction:column; gap:10px; }
+  .check-form input[type="text"]{ width:100%; min-width: unset; }
+  .result p strong{ width:110px; display:block; margin-bottom:6px; }
+}
+
+/* link style */
+a {
+  color:#0b62a8;
+  text-decoration:none;
+  border-bottom:1px dashed rgba(11,98,168,0.12);
+}
+a:hover{ text-decoration:underline; }
